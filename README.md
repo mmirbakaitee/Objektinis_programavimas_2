@@ -6,24 +6,24 @@ Sistemos parametrai:
      RAM: 8GB
      SSD: 500 GB
 
----------------------v.01 papildymai--------------------------------
+---------------------V.0.1 PAPILDYMAI--------------------------------
 
 Programa atlika ir su C masyvu,ir su std::vector konteineriu:
 1) Realizuota programa, kuri nuskaito vartotoju ivedamus duomenis (studento vardas, pavarde, namu darbu ir egzamino rezultatas).
 2) Baigus duomenu ivedima suskaiciuocamas galutinis vidurkis, mediana.
 
----------------------v.02 papildymai--------------------------------
+---------------------V.0.2 PAPILDYMAI--------------------------------
 
 1) Prideta funkcija scan, kuri nuskaito faila. 
 2) Apskaiciuojami studentu is failo vidurkiai ir medianos pagal formule. 
 3) Rezultatai surikiuojami pagal varda.
 
----------------------v.03 papildymai--------------------------------
+---------------------V.0.3 PAPILDYMAI--------------------------------
 
 1) Scan funkcijoje (nuskaito duomenu faila) implementuotas isimciu valdymas. 
 2) Programa isskaidyta i kelis *.cpp (main funkcijos, funkciju deklaracijos + strukturos) ir i kelis *.h (bibliotekos, funkciju) failus.
 
----------------------v.04 papildymai--------------------------------
+---------------------V.0.4 PAPILDYMAI--------------------------------
 
 1) Papildyta main funkcija. Suteikiama vartotojui daugiau galimybiu (galimas failu generavimas, perejimas tarp pasirinkimu, darbo uzbaigimas po darbo su txt failais).
 2) Pridetos kompleksines printPGtxt, printtxt funkcijos, kurios generuoja (jei reikia), nuskaito bei formuoja txt failus pagal reikalavimus. Sugeneruojamas studentu visu pazymiu failas, bendras studentu galutiniu pazymiu failas. Tuomet studentu isrusiuojami pagal nurodytas salygas ir jie su galutiniais rezultatais irasomi i atitinkamai skirtingus txt failus.
@@ -53,7 +53,7 @@ Laikas sekundėmis, kurį užtruko programa darant tam tikrus dalykus:
 |  VARGUOLIU irasymas  | 0.001714   | 0.040592  | 0.281979 | 2.36976  | 25.7387   |
 |  Bendras laikas      | 5.19551    | 8.63683   | 15.3479  | 62.9997  | 926.779   |
 
----------------------v.05 papildymai--------------------------------
+---------------------V.0.5 PAPILDYMAI--------------------------------
 
 1) Sukurtos trys programos naudojant skirtingo tipo konteinerius (vector, deque, list).
 2) Ten, kur reikia (programoje su list tipo konteineriu), atnaujintos sort funkcijos, pakeista medianos skaiciavimo funkcija.
@@ -88,3 +88,58 @@ Laikas sekundėmis, kurį užtruko programa (LIST):
 | Rūsiavimas                 | 0.000175 | 0.003546 | 0.044946 | 0.804268 | 20.0921 |
 | Skirstymas į dvi grupes    | 0.001894 | 0.021843 | 0.245001 | 2.74138  | 1402.82 |
 | Bendras laikas             | 0.018069 | 0.188585 | 1.7523   | 18.3856  | 1583.33 | 
+
+Greiciausiai veikia list'ai, o vector'iai ir deque'ai panasiai, isskyrus su 10000000, tuomet vector'iai veikia greiciausiai.
+
+---------------------V.1.0 PAPILDYMAI--------------------------------
+
+1) Implementuotas 2-osios strategijos studentu skirstymas (sukuriamas tik vienas naujas vektor'ius, o is pagr. vektor'iaus istrinama neaktualus duomenis)
+2) Implementuotas 2-osios strategijos studentu duomenu irasymas (irasome likusius duomenis is master vector'iaus ir varguoliu vector duomenis)
+3) Suteikta vartotojui galimybe pasirinkti, kokia strategija naudoti: naujaja ar senaja.
+4) Skirstymo pagreitinimui panaudoti std::erase bei std::partition algoritmai.
+
+ANALIZE SU JAU SUGENERUOTAIS FAILAIS (2-oji strategija (1-aja galite rasti V.0.5 PAPILDYMO aprasyme))
+
+a) Laikas sekundėmis, kurį užtruko programa (VECTOR std::erase):
+
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.006263 | 0.066761 | 4.339465 | 282.0652 | --dideli sk-- |
+| Skirstymas į dvi grupes    | 0.029743 | 2.72006  | 176.8039 | 5304.117 | --dideli sk-- |
+| Bendras laikas             | 0.036006 | 2.78682  | 181.1433 | 6340.016 | --dideli sk-- | 
+
+b) Laikas sekundėmis, kurį užtruko programa (VECTOR std::partition):
+
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.00582  | 0.064008 | 0.604973 | 9.44182 | 151.6273 |
+| Skirstymas į dvi grupes    | 0.002003 | 0.017828 | 0.18182  | 1.99382 | 19.9382  |
+| Bendras laikas             | 0.007967 | 0.078294 | 0.779234 | 11.4356 | 114.356  | 
+
+TASK MANAGER STATS (atmintis su 1000000):
+1 strategija: 71%
+2 strategija: 64%
+
+Laikas sekundėmis, kurį užtruko programa (DEQUE):
+
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000 |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.007274 | 0.076244 | 0.71878  | 7.83325 | 78.3325 |
+| Skirstymas į dvi grupes    | 0.002376 | 0.020917 | 0.217998 | 2.20474 | 22.0474 |
+| Bendras laikas             | 0.00965  | 0.097161 | 0.936778 | 10.038  | 100.38  | 
+
+TASK MANAGER STATS (atmintis su 1000000):
+1 strategija: 74%
+2 strategija: 63%
+
+Laikas sekundėmis, kurį užtruko programa (LIST):
+
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000 |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.000175 | 0.002379 | 0.042083 | 0.698188 | 9.774632 |
+| Skirstymas į dvi grupes    | 0.002242 | 0.025324 | 0.251771 | 2.64195  | 26.4195  |
+| Bendras laikas             | 0.002417 | 0.027703 | 0.293854 | 3.34014  | 33.4014  | 
+
+TASK MANAGER STATS (atmintis su 1000000):
+1 strategija: 81%
+2 strategija: 75%
