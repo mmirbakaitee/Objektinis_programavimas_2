@@ -146,3 +146,5 @@ TASK MANAGER STATS (atmintis su 1000000):
 
           1 strategija: 81%
           2 strategija: 75%
+          
+#REIKALINGOS INSTRUKCIJOS
