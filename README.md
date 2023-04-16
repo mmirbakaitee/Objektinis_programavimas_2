@@ -117,6 +117,7 @@ b) Laikas sekundėmis, kurį užtruko programa (VECTOR std::partition):
 | Bendras laikas             | 0.007967 | 0.078294 | 0.779234 | 11.4356 | 114.356  | 
 
 TASK MANAGER STATS (atmintis su 1000000):
+
           1 strategija: 71%
           2 strategija: 64%
 
@@ -129,6 +130,7 @@ Laikas sekundėmis, kurį užtruko programa (DEQUE):
 | Bendras laikas             | 0.00965  | 0.097161 | 0.936778 | 10.038  | 100.38  | 
 
 TASK MANAGER STATS (atmintis su 1000000):
+
           1 strategija: 74%
           2 strategija: 63%
 
@@ -141,5 +143,6 @@ Laikas sekundėmis, kurį užtruko programa (LIST):
 | Bendras laikas             | 0.002417 | 0.027703 | 0.293854 | 3.34014  | 33.4014  | 
 
 TASK MANAGER STATS (atmintis su 1000000):
+
           1 strategija: 81%
           2 strategija: 75%
