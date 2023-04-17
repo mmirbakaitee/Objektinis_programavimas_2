@@ -148,6 +148,9 @@ TASK MANAGER STATS (atmintis su 1000000):
           2 strategija: 75%
           
           
+          
+          
+          
 NAUDOJIMOSI INSTRUKCIJA:
 
           1. Norėdami paleisti VECTOR tipo projektą parsisiųskite šiuos failus:
