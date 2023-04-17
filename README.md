@@ -169,7 +169,7 @@ NAUDOJIMOSI INSTRUKCIJA:
                e) kursiokai.txt
              Sujunkite šiuos failus į vieną projektą ir programa turėtų sėkmingai veikti. Tolimesnes instrukcijas rasite paleidę programą.
              
-          2. Norėdami paleisti LIST tipo projektą parsisiųskite šiuos failus:
+          3. Norėdami paleisti LIST tipo projektą parsisiųskite šiuos failus:
                a) final.v.1.0.list.cpp
                b) vsourceL.cpp
                c) studentlib.h
