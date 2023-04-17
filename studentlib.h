@@ -46,6 +46,8 @@ using std::setfill;
 using std::remove;
 using std::isdigit;
 using std::swap; 
+using std::partition;
+using std::partition_copy;
 using std::string;
 using std::vector;
 using std::deque;
@@ -74,6 +76,8 @@ using std::exception;
 using std::stringstream;
 
 
+
+
 #ifndef S_ISREG
 #define S_ISREG(mode) (((mode) & S_IFMT) == S_IFREG)
 #endif
@@ -87,3 +91,5 @@ using std::stringstream;
 
 #endif
 
+//list.sort();
+//vardas.galutinis.sor
