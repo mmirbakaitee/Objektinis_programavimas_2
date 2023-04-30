@@ -176,4 +176,28 @@ NAUDOJIMOSI INSTRUKCIJA:
                d) vheaderisL.h
                e) kursiokai.txt
              Sujunkite šiuos failus į vieną projektą ir programa turėtų sėkmingai veikti. Tolimesnes instrukcijas rasite paleidę programą.
+             
+  ---------------------V.1.1 PAPILDYMAI--------------------------------
+  
+NAUDOJIMOSI INSTRUKCIJA:
 
+          1. Įsidiegti terminalą, kuris turi *git bash*
+          2. Įsidiegti *mingw* ir *cmake* extension
+          3. Sudėti visus failus į vieną folder'į
+          4. Build'inti cmake'ą
+          5. Terminale build/<paleidziamojofailopavadinimas>.exe
+          
+          
+Laikas sekundėmis, kurį užtruko programa (Struct Vector):
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.00582  | 0.064008 | 0.604973 | 9.44182 | 151.6273 |
+| Skirstymas į dvi grupes    | 0.002003 | 0.017828 | 0.18182  | 1.99382 | 19.9382  |
+| Bendras laikas             | 0.007967 | 0.078294 | 0.779234 | 11.4356 | 114.356  | 
+
+Laikas sekundėmis, kurį užtruko programa (Class Vector):
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.003416  | 0.065145| 0.27669  | 2.490264 | 22.41237  |
+| Skirstymas į dvi grupes    | 0.01099   | 0.09891 | 0.89019  | 8.01171  | 72.10539  |
+| Bendras laikas             | 0.014406  | 0.164055| 1.47649  | 13.28846 | 119.5960  | 
