@@ -147,57 +147,75 @@ TASK MANAGER STATS (atmintis su 1000000):
           1 strategija: 81%
           2 strategija: 75%
           
-          
-          
-          
-          
-NAUDOJIMOSI INSTRUKCIJA:
+ NAUDOJIMOSI INSTRUKCIJA:
 
-          1. Norėdami paleisti VECTOR tipo projektą parsisiųskite šiuos failus:
-               a) final.v.1.0.vector.cpp
-               b) vsourceV.cpp
-               c) studentlib.h
-               d) vheaderisV.h
-               e) kursiokai.txt
-             Sujunkite šiuos failus į vieną projektą ir programa turėtų sėkmingai veikti. Tolimesnes instrukcijas rasite paleidę programą.
-             
-          2. Norėdami paleisti DEQUE tipo projektą parsisiųskite šiuos failus:
-               a) final.v.1.0.deque.cpp
-               b) vsourceD.cpp
-               c) studentlib.h
-               d) vheaderisD.h
-               e) kursiokai.txt
-             Sujunkite šiuos failus į vieną projektą ir programa turėtų sėkmingai veikti. Tolimesnes instrukcijas rasite paleidę programą.
-             
-          3. Norėdami paleisti LIST tipo projektą parsisiųskite šiuos failus:
-               a) final.v.1.0.list.cpp
-               b) vsourceL.cpp
-               c) studentlib.h
-               d) vheaderisL.h
-               e) kursiokai.txt
-             Sujunkite šiuos failus į vieną projektą ir programa turėtų sėkmingai veikti. Tolimesnes instrukcijas rasite paleidę programą.
-             
+          1. Parsisiųskite šiuos failus:
+               a) final.v.1.0.vector.cpp, final.v.1.0.deque.cpp, final.v.1.0.list.cpp
+               b) vsourceV.cpp, vsourceD.cpp, vsourceL.cpp
+               c) vheaderisV.h, vheaderisD.h, vheaderisL.h
+               d) studentlib.h, kursiokai.txt, CMakeLists.txt
+           2. Sudėkite juos į vieną sukurtą folderį (pareadaguokite CMakeLists.txt faile projekto pavadinimą pagal sukurto aplanko pavadinimą).
+           3. Build'inkite CMakeLists.txt
+           4. Terminale build/<paleidziamojofailopavadinimas>.exe
+           
   ---------------------V.1.1 PAPILDYMAI--------------------------------
+  
+  1) Vector Struct pakeistas į Vector Class
+  2) Pakeistos tam tikros funkcijos, jog būtų labiau pritaikytoms Class konteineriui
+  3) Pareadaguotas CMakeLists.txt failas, jog būtų kompiliuojama naudojant Flag'us
   
 NAUDOJIMOSI INSTRUKCIJA:
 
           1. Įsidiegti terminalą, kuris turi *git bash*
-          2. Įsidiegti *mingw* ir *cmake* extension
-          3. Sudėti visus failus į vieną folder'į
-          4. Build'inti cmake'ą
-          5. Terminale build/<paleidziamojofailopavadinimas>.exe
+          2. Įsidiegti *mingw* ir *cmake* extensions
+          3. Parsisiųskite šiuos failus:
+               a) final.v.1.0.vector.cpp, final.v.1.0.deque.cpp, final.v.1.0.list.cpp
+               b) vsourceV.cpp, vsourceD.cpp, vsourceL.cpp
+               c) vheaderisV.h, vheaderisD.h, vheaderisL.h
+               d) studentlib.h, kursiokai.txt, CMakeLists.txt
+           4. Sudėkite juos į vieną sukurtą folderį (pareadaguokite CMakeLists.txt faile projekto pavadinimą pagal sukurto aplanko pavadinimą).
+           5. Build'inkite CMakeLists.txt
+           6. Terminale build/<paleidziamojofailopavadinimas>.exe
           
           
-Laikas sekundėmis, kurį užtruko programa (Struct Vector):
+Laikas sekundėmis, kurį užtruko programa (Struct Vector -03 2 strategija):
 |   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
 |---|---|---|---|---|---|
-| Rūsiavimas                 | 0.00582  | 0.064008 | 0.604973 | 9.44182 | 151.6273 |
-| Skirstymas į dvi grupes    | 0.002003 | 0.017828 | 0.18182  | 1.99382 | 19.9382  |
-| Bendras laikas             | 0.007967 | 0.078294 | 0.779234 | 11.4356 | 114.356  | 
+| Rūsiavimas                 | 0.000151  | 0.00501  | 0.16533  | 5.45589 | 180.0444 |
+| Skirstymas į dvi grupes    | 0.007359  | 0.508052 | 4.064416 | 16.2577 | 130.0613 |
+| Bendras laikas             | 0.00751   | 0.513062 | 4.229746 | 21.7136 | 310.1057 | 
 
-Laikas sekundėmis, kurį užtruko programa (Class Vector):
+Laikas sekundėmis, kurį užtruko programa (Class Vector -03 2 strategija):
 |   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
 |---|---|---|---|---|---|
-| Rūsiavimas                 | 0.003416  | 0.065145| 0.27669  | 2.490264 | 22.41237  |
-| Skirstymas į dvi grupes    | 0.01099   | 0.09891 | 0.89019  | 8.01171  | 72.10539  |
-| Bendras laikas             | 0.014406  | 0.164055| 1.47649  | 13.28846 | 119.5960  | 
+| Rūsiavimas                 | 0.002      | 0.045863  | 0.68754  | 10.31316 | 154.6975 |
+| Skirstymas į dvi grupes    | 0.007351   | 0.508044  | 0.64408  | 16.2569  | 130.605  |
+| Bendras laikas             | 0.009351   | 0.553907  | 1.33162  | 26.57006 | 281.3025 | 
+
+Laikas sekundėmis, kurį užtruko programa (Class Vector -02 2 strategija):
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.006218  | 0.068398 | 0.752378  | 8.276158  | 91.037738 |
+| Skirstymas į dvi grupes    | 0.017526  |1.05156   | 6.30936   | 37.85616  | 227.13696 |
+| Bendras laikas             | 0.023744  | 1.119958 | 7.061738  | 46.132318 | 318.17478 | 
+
+Laikas sekundėmis, kurį užtruko programa (Class Vector -01 2 strategija):
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.005844  | 0.061428 | 0.67571  | 7.432836 | 81.76120  |
+| Skirstymas į dvi grupes    | 0.01521   | 0.09126  | 0.54756  | 3.28536  | 19.71216  |
+| Bendras laikas             | 0.021054  | 0.152688 | 1.22327  | 10.71819 | 101.473   | 
+
+Laikas sekundėmis, kurį užtruko programa (Class Vector 2 strategija):
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| Rūsiavimas                 | 0.00524  | 0.04764 | 0.63404  | 6.97444  | 76.71884  |
+| Skirstymas į dvi grupes    | 0.01631  | 0.09786 | 0.58716  | 3.52296  | 21.3776   |
+| Bendras laikas             | 0.02155  | 0.1455  | 1.2212   | 10.4974  | 98.09644  | 
+
+
+EKSPERIMENTINĖ ANALIZĖ (su studentai1000000.txt failu):
+|   | -01 | -02  | -03  | 
+|---|---|---|---|
+| Skaičiavimų trukmė  | 10.71819 | 46.132318 | 26.57006 | 
+| Projekto dydis      | 391KB  | 383KB | 368KB |  
