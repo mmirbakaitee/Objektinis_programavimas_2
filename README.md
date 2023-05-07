@@ -116,7 +116,7 @@ b) Laikas sekundėmis, kurį užtruko programa (VECTOR std::partition):
 | Skirstymas į dvi grupes    | 0.002003 | 0.017828 | 0.18182  | 1.99382 | 19.9382  |
 | Bendras laikas             | 0.007967 | 0.078294 | 0.779234 | 11.4356 | 114.356  | 
 
-TASK MANAGER STATS (atmintis su 1000000):
+TASK MANAGER STATS (kompiuterio atmintis su 1000000):
 
           1 strategija: 71%
           2 strategija: 64%
@@ -129,7 +129,7 @@ Laikas sekundėmis, kurį užtruko programa (DEQUE):
 | Skirstymas į dvi grupes    | 0.002376 | 0.020917 | 0.217998 | 2.20474 | 22.0474 |
 | Bendras laikas             | 0.00965  | 0.097161 | 0.936778 | 10.038  | 100.38  | 
 
-TASK MANAGER STATS (atmintis su 1000000):
+TASK MANAGER STATS (kompiuterio atmintis su 1000000):
 
           1 strategija: 74%
           2 strategija: 63%
@@ -142,7 +142,7 @@ Laikas sekundėmis, kurį užtruko programa (LIST):
 | Skirstymas į dvi grupes    | 0.002242 | 0.025324 | 0.251771 | 2.64195  | 26.4195  |
 | Bendras laikas             | 0.002417 | 0.027703 | 0.293854 | 3.34014  | 33.4014  | 
 
-TASK MANAGER STATS (atmintis su 1000000):
+TASK MANAGER STATS (kompiuterio atmintis su 1000000):
 
           1 strategija: 81%
           2 strategija: 75%
@@ -217,5 +217,18 @@ Laikas sekundėmis, kurį užtruko programa (Class Vector 2 strategija):
 EKSPERIMENTINĖ ANALIZĖ (su studentai1000000.txt failu):
 |   | -01 | -02  | -03  | 
 |---|---|---|---|
-| Skaičiavimų trukmė  | 10.71819 | 46.132318 | 26.57006 | 
+| Skaičiavimų trukmė  (sek.) | 10.71819 | 46.132318 | 26.57006 | 
 | Projekto dydis      | 391KB  | 383KB | 368KB |  
+
+ ---------------------V.1.1 PAPILDYMAI--------------------------------
+ 
+ 1) Realizuota "*Rule of five*" implementacija klasėje:
+
+           a) Klasėje pridėtas objekto destruktorius (jau buvo implementuotas ir v1.1 versijoje).
+           b) Klasėje pridėtas objekto kopijavimo konstruktorius.
+           c) Klasėje pridėtas objekto konstruktorius (**move**).
+           d) Klasėje pridėtas reikšmių perdavimo funkcija.
+           e) Klasėje pridėta reikšmių perdavimo funckija (**move**).
+           
+2) Klasėje implementuota studentų informacijos išvedimo funkcija.
+3) Funkcijų faile pakoreguotas studentų infomacijos išvedimas pritaikant klasėje esančią studentų informacijos išvedimo funkciją.
