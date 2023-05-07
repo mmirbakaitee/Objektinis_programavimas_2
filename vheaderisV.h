@@ -412,7 +412,6 @@ if (amount == 10000000) strncpy(x, CRP5fv, sizeof(x));
 
 //funkcija, kuri veikia kai sugeneruoto failo nera
 void printPGtxt(vector<Student>& info, int amount, Student& stud, string ammount) {
-    // nuo cia iki pazymetos vietos generuoja failus ok krc nafik
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> pazymys(1, 10);
@@ -512,7 +511,7 @@ for (int i = 0; i < amount; i++) {
     fv << setfill('-') << setw(60) << "" << setfill(' ') << endl;
 
     for (auto i : info) {
-        cout << i;
+        fg << i;
     }
    
 
