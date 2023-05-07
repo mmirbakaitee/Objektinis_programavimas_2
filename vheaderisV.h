@@ -308,8 +308,7 @@ if (amount == 10000000) strncpy(x, CRP5fv, sizeof(x));
         fv << setfill('-') << setw(60) << "" << setfill(' ') << endl;
 
         for (auto i : info) {
-            snprintf(eil, sizeof(eil), "%-20s%-20s%-6.2f%-6.2f\n", i.getvardas().c_str(), i.getpavarde().c_str(), i.getgal(), i.getmed());
-            fg << eil;
+           fg << i ;
         }
 
        startsort = std::chrono::high_resolution_clock::now();
@@ -346,16 +345,14 @@ if (amount == 10000000) strncpy(x, CRP5fv, sizeof(x));
 
             startkiet = std::chrono::high_resolution_clock::now();
             for (auto i : kietiakaii) {
-                snprintf(eil, sizeof(eil), "%-20s%-20s%-6.2f%-6.2f\n", i.getvardas().c_str(), i.getpavarde().c_str(), i.getgal() * 0.4 + i.gete() * 0.6, i.getmed());
-                fk << eil;
+                fk << i;
             }
             endkiet = std::chrono::high_resolution_clock::now();
             durationkiet = std::chrono::duration_cast<std::chrono::microseconds>(endkiet - startkiet);
 
             startvarg = std::chrono::high_resolution_clock::now();
             for (auto i : varguoliaii) {
-                snprintf(eil, sizeof(eil), "%-20s%-20s%-6.2f%-6.2f\n", i.getvardas().c_str(), i.getpavarde().c_str(), i.getgal() * 0.4 + i.gete() * 0.6, i.getmed());
-                fv << eil;
+                fv << i;
             }
             endvarg = std::chrono::high_resolution_clock::now();
             durationvarg = std::chrono::duration_cast<std::chrono::microseconds>(endvarg - startvarg);
@@ -385,16 +382,14 @@ if (amount == 10000000) strncpy(x, CRP5fv, sizeof(x));
 
             startkiet = std::chrono::high_resolution_clock::now();
             for (auto i : info) {
-                snprintf(eil, sizeof(eil), "%-20s%-20s%-6.2f%-6.2f\n", i.getvardas().c_str(), i.getpavarde().c_str(), i.getgal() * 0.4 + i.gete() * 0.6, i.getmed());
-                fk << eil;
+                fk << i;
             }
             endkiet = std::chrono::high_resolution_clock::now();
             durationkiet = std::chrono::duration_cast<std::chrono::microseconds>(endkiet - startkiet);
 
             startvarg = std::chrono::high_resolution_clock::now();
             for (auto i : varguoliaii) {
-               snprintf(eil, sizeof(eil), "%-20s%-20s%-6.2f%-6.2f\n", i.getvardas().c_str(), i.getpavarde().c_str(), i.getgal() * 0.4 + i.gete() * 0.6, i.getmed());
-                fv << eil;
+               fv << i;
             }
             endvarg = std::chrono::high_resolution_clock::now();
             durationvarg = std::chrono::duration_cast<std::chrono::microseconds>(endvarg - startvarg);
