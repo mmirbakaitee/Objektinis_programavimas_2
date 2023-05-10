@@ -232,3 +232,10 @@ EKSPERIMENTINĖ ANALIZĖ (su studentai1000000.txt failu):
            
 2) Klasėje implementuota studentų informacijos išvedimo funkcija.
 3) Funkcijų faile pakoreguotas studentų infomacijos išvedimas pritaikant klasėje esančią studentų informacijos išvedimo funkciją.
+
+Laikas sekundėmis, kurį užtruko programa įrašdama į file'us:
+|   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
+|---|---|---|---|---|---|
+| sprinf  | 0.005888 | 0.052992 | 0.476928  | 4.292352  | 38.631168  |
+| ostream  | 0.013506  | 0.121554 | 1.093986  | 9.845874  | 88.612866  |
+
