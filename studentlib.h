@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <cstdlib> 
+#include <cassert> 
 #include <time.h> 
 #include <cctype> 
 #include <iomanip>
