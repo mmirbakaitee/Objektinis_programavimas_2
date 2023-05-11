@@ -19,8 +19,9 @@ private:
     double med;
 public:
     Student() : e(0) {}
+    Student(const std::string& v, const std::string& p, const std::vector<int>& p_, double e_): vardas(v), pavarde(p), p(p_), e(e_), gal(0), med(0) {}
     Student(std::istream& is);
-//
+    
     void setvardas(string vardas_) { vardas = vardas_; }
     void setpavarde(string pavarde_) { pavarde = pavarde_; }
     void setp(vector<int> p_) { p = p_; }
@@ -92,6 +93,7 @@ public:
     friend double medi(const Student&);
 };
 
+void TestFunc5();
 bool FileExists(const std::string& Filename);
 void addstudent(vector<Student>& students, Student& stud);
 void addgrade(vector<int>& p);
