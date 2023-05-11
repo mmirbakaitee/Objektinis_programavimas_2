@@ -4,6 +4,41 @@
 
 #include "vsourceV.cpp"
 
+// pratestuosime rule of five
+void TestFunc5 () {
+  // Create an initial Student object
+  vector<int> pazymiai {1, 1, 1, 10};
+  Student s1 {"First", "Student", pazymiai, 4.0};
+    s1.setp(pazymiai);
+    s1.setgal(aver(s1));
+    s1.setmed(medi(s1));
+  cout << "s1: \n" << s1 << endl;
+
+  // Test copy constructor
+  Student s2(s1);
+  cout << "s2: \n" << s2 << endl;
+
+  // Test default constructor and copy assignment operator
+  Student s3;
+  cout << "Tuscias s3: \n" << s3 << endl;
+  s3 = s2;
+  cout << "Priskirtas is s2 naujas s3: \n" << s3 << endl;
+
+  // Test move constructor
+  Student s4 = Student {"New", "Student", pazymiai, 3.0};
+  s4.setp(pazymiai);
+    s4.setgal(aver(s4));
+    s4.setmed(medi(s4));
+  cout << "s4: \n" << s4 << endl;
+
+  // Test move assignment operator
+  Student s5 = std::move(s4);
+  s5.setp(pazymiai);
+    s5.setgal(aver(s5));
+    s5.setmed(medi(s5));
+  cout << "s5: \n" << s5 << endl;
+}
+
 template <typename T>
 void sort_time(vector<Student> info)
 {
