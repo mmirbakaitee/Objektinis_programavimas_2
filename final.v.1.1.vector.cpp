@@ -2,6 +2,7 @@
 
 int main() {
 
+    TestFunc5();
     Student stud;
     vector<Student> students;
 
