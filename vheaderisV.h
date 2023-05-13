@@ -12,7 +12,6 @@ void TestFunc5 () {
     s1.setvardas("First");
     s1.setpavarde("Student");
     s1.setp(pazymiai);
-    s1.setgal(4.0);
     s1.setgal(aver(s1));
     s1.setmed(medi(s1));
   cout << "s1: \n" << s1 << endl;
@@ -32,7 +31,6 @@ void TestFunc5 () {
     s4.setvardas("New");
     s4.setpavarde("Student");
     s4.setp(pazymiai);
-    s4.setgal(3.0);
     s4.setgal(aver(s4));
     s4.setmed(medi(s4));
   cout << "s4: \n" << s4 << endl;
