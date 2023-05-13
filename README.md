@@ -220,7 +220,7 @@ EKSPERIMENTINĖ ANALIZĖ (su studentai1000000.txt failu):
 | Skaičiavimų trukmė  (sek.) | 10.71819 | 46.132318 | 26.57006 | 
 | Projekto dydis      | 391KB  | 383KB | 368KB |  
 
- ---------------------V.1.1 PAPILDYMAI--------------------------------
+ ---------------------V.1.2 PAPILDYMAI--------------------------------
  
  1) Realizuota "*Rule of five*" implementacija klasėje:
 
