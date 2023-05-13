@@ -232,6 +232,7 @@ EKSPERIMENTINĖ ANALIZĖ (su studentai1000000.txt failu):
            
 2) Klasėje implementuota studentų informacijos išvedimo funkcija.
 3) Funkcijų faile pakoreguotas studentų infomacijos išvedimas pritaikant klasėje esančią studentų informacijos išvedimo funkciją.
+4) Implementuota Rule of five testavimo f-ja
 
 Laikas sekundėmis, kurį užtruko programa įrašdama į file'us:
 |   | 1000  | 10000  | 100000  | 1000000  | 10000000  |
