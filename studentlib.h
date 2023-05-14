@@ -75,9 +75,6 @@ using std::underflow_error;
 using std::exception;
 using std::stringstream;
 
-
-
-
 #ifndef S_ISREG
 #define S_ISREG(mode) (((mode) & S_IFMT) == S_IFREG)
 #endif
