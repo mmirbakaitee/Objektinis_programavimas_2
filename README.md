@@ -249,3 +249,16 @@ Abstrakčiosios f-jos:
 
                virtual std::string getvardas() const { return vardas; }
                virtual std::string getpavarde() const { return pavarde; }
+               
+---------------------V.2.0 PAPILDYMAI--------------------------------
+
+1) Sukurta dokumentacija panaudojant Doxygen 1.5 projekto pagrindu.
+2) Realizuoti Unit Testai naudojant catch.
+3) Sukurtas automatinis diegimo file setup.exe
+
+NAUDOJIMOSI INSTRUKCIJA:
+
+          1) Parsisiuskite setup.exe file
+          2) Pasirinkite norima path
+          3) Paleiskite toje path .exe file
+          4) Sekite konsoleje esenacias tolimesnes instrukcijas
