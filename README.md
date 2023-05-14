@@ -240,3 +240,12 @@ Laikas sekundėmis, kurį užtruko programa įrašdama į file'us:
 | sprinf  | 0.005888 | 0.052992 | 0.476928  | 4.292352  | 38.631168  |
 | ostream  | 0.013506  | 0.121554 | 1.093986  | 9.845874  | 88.612866  |
 
+---------------------V.1.5 PAPILDYMAI--------------------------------
+
+1) Senoji klasė pakeista į bazinę ir jos išvestinę. 
+2) Studento vardas, pavardė yra apsaugoti: nebėra vieši, tačiau vis dar prieinami.
+
+Abstrakčiosios f-jos:
+
+               virtual std::string getvardas() const { return vardas; }
+               virtual std::string getpavarde() const { return pavarde; }
