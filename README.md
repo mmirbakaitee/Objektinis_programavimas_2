@@ -262,3 +262,9 @@ NAUDOJIMOSI INSTRUKCIJA:
           2) Pasirinkite norima path
           3) Paleiskite toje path .exe file
           4) Sekite konsoleje esenacias tolimesnes instrukcijas
+
+---------------------V.3.0 PAPILDYMAI--------------------------------
+
+1) Sukurta Vector Class, kuri bus naudojama std::vector vietoje
+2) Pratestuotas Vector Class funkcijų funkcionalumas
+3) Vector Class implementuota V2.0 programoje 
