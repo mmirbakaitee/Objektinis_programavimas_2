@@ -268,3 +268,38 @@ NAUDOJIMOSI INSTRUKCIJA:
 1) Sukurta Vector Class, kuri bus naudojama std::vector vietoje
 2) Pratestuotas Vector Class funkcijų funkcionalumas
 3) Vector Class implementuota V2.0 programoje 
+
+FUNKCIJŲ PALYGINIMAS (Modifiers Test):
+|   | std::vector | Vector Class  |  
+|---|---|---|
+| Original Array:     | 10 20 30          | 10 20 30          | 
+| After Clear:        |                   |                   | 
+| After Assign:       | 40 40 40          | 40 40 40          | 
+| After Insert:       | 10 40 40 40       | 10 40 40 40       | 
+| After Emplace:      | 10 80 40 40 40    | 10 80 40 40 40    |
+| After Erase:        | 10 80 40 40       | 10 80 40 40       | 
+| After Emplace Back: | 10 80 40 40 90 100| 10 80 40 40 90 100| 
+| After Pop Back:     | 10 80 40 40 90    | 10 80 40 40 90    |
+| After Resize:       | 10 80 40 40 90 0  | 10 80 40 40 90 0  | 
+| After Swap:         | 200 300           | 200 300           | 
+
+Laikas sekundėmis, kurį užtruko programa užpildydama vektorius:
+|   | std::vector | Vector Class  |  
+|---|---|---|
+| 10000     | 0.000945 | 0.000479 | 
+| 100000    | 0.006788 | 0.004063 | 
+| 1000000   | 0.051145 | 0.040929 | 
+| 10000000  | 0.415288 | 0.479569 | 
+| 100000000 | 4.58199  | 4.31924  | 
+
+Laikas sekundėmis, kurį užtruko v2.0 programa:
+|   | std::vector | Vector Class |  
+|---|---|---|
+| NUSKAITYMAS:         | 0.263025 | 2.677977  |
+| RUSIAVIMAS:          | 0.558477 | 0.722223  | 
+| SKIRSTYMAS:          | 82.07793 | 72.64143  | 
+| KIETIAKU IRASYMAS:   | 0.645723 | 0.613089  | 
+| VARGUOLIU IRASYMAS:  | 0.458991 | 0.449208  | 
+| BENDRA TRUKME:       | 84.00415 | 77.10392  | 
+
+
