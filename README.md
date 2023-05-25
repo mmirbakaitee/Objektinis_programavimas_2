@@ -267,7 +267,8 @@ NAUDOJIMOSI INSTRUKCIJA:
 
 1) Sukurta Vector Class, kuri bus naudojama std::vector vietoje
 2) Pratestuotas Vector Class funkcijų funkcionalumas
-3) Vector Class implementuota V2.0 programoje 
+3) Pratestuota Vector Class vektoriaus uzpildymo trukme
+4) Vector Class implementuota V2.0 programoje 
 
 FUNKCIJŲ PALYGINIMAS (Modifiers Test):
 |   | std::vector | Vector Class  |  
