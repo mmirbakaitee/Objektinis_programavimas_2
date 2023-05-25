@@ -66,7 +66,7 @@ void TestFunc5 () {
 }
 
 template <typename T>
-void sort_time(vector<Student> info)
+void sort_time(Vector<Student> info)
 {
     auto start = std::chrono::high_resolution_clock::now();
     std::sort(info.begin(), info.end());
