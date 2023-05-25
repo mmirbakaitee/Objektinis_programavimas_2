@@ -1,9 +1,10 @@
 #include "vheaderisV.cpp"
 
 int main() {
-
+    // Testavimai
     //TestFunc5();
-
+      code();
+    
     Student stud;
     Vector<Student> students;
 
