@@ -109,6 +109,7 @@ public:
 };
 
 void TestFunc5();
+void code ();
 bool FileExists(const std::string& Filename);
 void addstudent(Vector <Student>& students, Student& stud);
 void addgrade(Vector <int>& p);
