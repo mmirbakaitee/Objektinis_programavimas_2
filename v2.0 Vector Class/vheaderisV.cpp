@@ -1,6 +1,32 @@
-//#include "vsourceV.h"
 #include "vsourceVV.h"
-// pratestuosime rule of five
+
+void code () {
+    unsigned int sz = 100000000;
+    unsigned int vector_reallocations = 0;
+    unsigned int Vector_reallocations = 0;
+
+    // std::vector
+    {
+        std::vector<int> v1;
+        for (int i = 1; i <= sz; ++i) {
+            v1.push_back(i);
+            if (v1.capacity() == v1.size())
+                ++vector_reallocations;
+        }
+    }
+    // Vektorius 
+    {
+        Vector<int> v2;
+        for (int i = 1; i <= sz; ++i) {
+            v2.push_back(i);
+            if (v2.capacity() == v2.size())
+                ++Vector_reallocations;
+        }
+     }
+    cout << "vector_reallocations: " << vector_reallocations << endl;
+    cout << "Vektorius_reallocations: " << Vector_reallocations << endl;
+}
+
 void TestFunc5 () {
 
   Vector <int> pazymiai {1, 1, 1, 10};
@@ -423,9 +449,9 @@ if (amount == 10000000) strncpy(x, CRP5fv, sizeof(x));
         cout << left << "FAILO NUSKAITYMO TRUKME:       " << left << durationnus.count() / 1000000.0 << " seconds. " << endl;
         cout << left << "FAILO RUSIAVIMO TRUKME:        " << left << durationsort.count() / 1000000.0 << " seconds. " << endl;
         cout << left << "FAILO SKIRSTYMO TRUKME:        " << left << durationrus.count() / 1000000.0 << " seconds. " << endl;
-       //cout << left << "KIETIAKU IRASYMO TRUKME:       " << left << durationkiet.count() / 1000000.0 << " seconds. " << endl;
-       //cout << left << "VARGUOLIU IRASYMO TRUKME:      " << left << durationvarg.count() / 1000000.0 << " seconds. " << endl;
-        cout << left << "\nBENDRA TRUKME:                 " << left << durationnus.count() / 1000000.0 + durationsort.count() / 1000000.0 + durationrus.count() / 1000000.0 << " seconds. " << endl;
+        cout << left << "KIETIAKU IRASYMO TRUKME:       " << left << durationkiet.count() / 1000000.0 << " seconds. " << endl;
+        cout << left << "VARGUOLIU IRASYMO TRUKME:      " << left << durationvarg.count() / 1000000.0 << " seconds. " << endl;
+        cout << left << "\nBENDRA TRUKME:                 " << left << durationnus.count() / 1000000.0 + durationsort.count() / 1000000.0 + durationrus.count() / 1000000.0 +  durationkiet.count() / 1000000.0 + durationvarg.count() / 1000000.0 << " seconds. " << endl;
         cout << endl;
 
         fv.close(); fk.close(); fg.close();
@@ -639,5 +665,3 @@ for (int i = 0; i < amount; i++) {
     kietiakaii.clear();
     varguoliaii.clear();
 }
-
-
